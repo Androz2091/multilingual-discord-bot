@@ -25,7 +25,7 @@ client.on("message", (message) => {
     }
     
     if(message.content.startsWith("!setlang")){
-        var langages = ["english", "french"]
+        const langages = ["english", "french"]
         const newLanguageName = message.content.split(" ")[1];
         // If no new language is specified, returns an error message
         if(!newLanguageName){
