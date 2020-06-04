@@ -10,6 +10,9 @@ client.on("ready", () => {
 });
 
 client.on("message", (message) => {
+    
+    if(!message.guild) return;
+    
     // Gets guild langugage (it can be "english" or "french" in our case)
     const guildLanguage = guildLanguages[message.guild.id] || "english"; // "english" will be the default language
     const language = require(`./languages/${guildLanguage}`);
